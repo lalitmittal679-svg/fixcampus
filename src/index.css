@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { -webkit-font-smoothing: antialiased; }
+  body { @apply bg-bg text-ink font-sans; margin: 0; overflow-x: hidden; }
+  h1, h2, h3 { @apply tracking-tight; }
+  :focus-visible { outline: 2px solid #416FAD; outline-offset: 2px; }
+}
+
+@layer components {
+  .card { @apply bg-white border border-line rounded-2xl shadow-card; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-colors disabled:opacity-60 disabled:cursor-not-allowed; }
+  .btn-primary { @apply btn bg-brand text-white hover:bg-brand-dark; }
+  .btn-secondary { @apply btn bg-white text-ink border border-line hover:bg-bg; }
+  .btn-danger { @apply btn bg-danger text-white hover:opacity-90; }
+  .input { @apply w-full rounded-xl border border-line bg-white px-3.5 py-2.5 text-sm text-ink placeholder:text-muted/70 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20; }
+  .label { @apply mb-1.5 block text-sm font-semibold text-ink; }
+}
+
+.leaflet-container { font-family: 'DM Sans', sans-serif; border-radius: 14px; z-index: 0; }
+.leaflet-popup-content-wrapper { border-radius: 12px; }
+.fmc-pin { background: transparent; border: none; }
